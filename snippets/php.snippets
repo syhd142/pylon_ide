@@ -1,0 +1,38 @@
+snippet s1
+	echo "---------------step 1 ---------------<br>\n";${1}
+snippet s2
+	echo "---------------step 2 ---------------<br>\n";${1}
+snippet s3
+	echo "---------------step 3 ---------------<br>\n";${1}
+snippet s4
+	echo "---------------step 4 ---------------<br>\n";${1}
+snippet s5
+	echo "---------------step 5 ---------------<br>\n";${1}
+snippet s6
+	echo "---------------step 6 ---------------<br>\n";${1}
+snippet s7
+	echo "---------------step 7 ---------------<br>\n";${1}
+snippet s8
+	echo "---------------step 8 ---------------<br>\n";${1}
+snippet s9
+	echo "---------------step 9 ---------------<br>\n";${1}
+snippet s10
+	echo "---------------step 10 ---------------<br>\n";${1}
+snippet plr
+	$${1:var} = $request->${2:$1}; ${3}
+snippet plx
+	$xcontext->${2:$1} = $${1:var}; ${3} 
+snippet plca
+	class Action_${1:action} extends XAction
+	{
+		public function _run($request,$xcontext)
+		{
+			${2}
+
+			return XNext::nothing();
+		}
+	}
+snippet pli
+	GLogFinder::ins()->getLogger('biz')->info("M-".__METHOD__.--"${2:$1}=>".json_encode($${1:var}));${3}
+snippet ple
+	GLogFinder::ins()->getLogger('biz')->error("M-".__METHOD__.--"${2:$1}=>".json_encode($${1:var}));${3}
